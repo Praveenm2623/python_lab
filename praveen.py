@@ -26,3 +26,17 @@ else:
 for i in range(10):
  if str_val.count(str(i)) > 0:
  print(str(i),"appears", str_val.count(str(i)), "times");
+
+def fn(n):
+ if n == 1:
+ return 0
+ elif n == 2:
+ return 1
+ else:
+ return fn(n-1) + fn(n-2)
+
+num = int(input("Enter a number : "))
+if num > 0:
+ print("fn(", num, ") = ",fn(num) , sep ="")
+else:
+ print("Error in input")
